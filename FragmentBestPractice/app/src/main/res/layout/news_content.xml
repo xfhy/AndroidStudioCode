@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--单页新闻内容布局 只加载一个碎片  这是给Activity用的-->
+
+    <fragment
+        android:id="@+id/news_content_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.xfhy.fragmentbestpractice.fragment.NewsContentFragment"/>
+
+</LinearLayout>

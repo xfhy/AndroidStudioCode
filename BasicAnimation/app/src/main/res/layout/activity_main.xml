@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xfhy.basicanimation.MainActivity">
+
+    <Button
+        android:id="@+id/btn_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/flatbutton"
+        android:text="渐变操作"/>
+
+    <Button
+        android:id="@+id/btn_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_alpha"
+        android:layout_alignBottom="@id/btn_alpha"
+        android:layout_toEndOf="@id/btn_alpha"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/flatbutton"
+        android:text="伸缩操作"/>
+
+
+    <Button
+        android:id="@+id/btn_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_alpha"
+        android:layout_alignStart="@id/btn_alpha"
+        android:layout_alignEnd="@id/btn_alpha"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/flatbutton"
+        android:text="平移操作"/>
+
+
+    <Button
+        android:id="@+id/btn_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_scale"
+        android:background="@drawable/flatbutton"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/btn_translate"
+        android:layout_marginStart="10dp"
+        android:text="旋转操作"/>
+
+    <ImageView
+        android:id="@+id/my_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="this is a test pictrue"
+        android:src="@drawable/my_view"/>
+</RelativeLayout>

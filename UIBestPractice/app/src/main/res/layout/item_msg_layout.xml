@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!--这是消息子项   RecyclerView的子项
+        让收到的消息左对齐
+        发出的消息右对齐
+    -->
+
+    <LinearLayout
+        android:id="@+id/ll_left_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/message_left"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_left_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="dadadassadasdasdsa"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/message_right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_right_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="center"
+            android:text="dadasdasdasfdasfasfasfa"
+            android:layout_margin="10dp"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

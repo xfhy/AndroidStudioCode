@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<litepal>
+
+    <!--数据库名-->
+    <dbname value="BookStore"></dbname>
+
+    <!--数据库版本号-->
+    <version value="2"></version>
+
+    <!--所有的映射模型-->
+    <list>
+        <!--使用mapping标签来声明我们要配置的映射模型类-->
+        <mapping class="com.xfhy.litepaltest.bean.Book"></mapping>
+        <mapping class="com.xfhy.litepaltest.bean.Category"></mapping>
+    </list>
+</litepal>
