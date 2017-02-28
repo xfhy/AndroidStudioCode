@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xfhy.cameraalbumtest">
+
+    <!--在android4.4系统之前,访问sd卡的应用关联目录也是要声明权限的,从4.4系统开始不再
+    需要权限声明,这里我们为了能兼容老版本的系统的手机-->
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            authorities参数必须和刚才FileProvider.getUriForFile()的第二个参数保持一致,可随意写
+            name的值是固定的
+            <meta-data>用来指定共享路径,并引用了一个@xml/file_paths资源
+        -->
+        <provider
+            android:authorities="com.xfhy.cameraalbumtest.fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                />
+        </provider>
+
+    </application>
+
+</manifest>
