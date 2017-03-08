@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fruit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.xfhy.materialtest.FruitActivity">
+
+    <!--
+        垂直的LinearLayout
+    -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true">
+
+        <!--
+            app:contentScrim="?attr/colorPrimary":  指定CollapsingToolbarLayout在趋于折叠状态以及
+            折叠之后的背景色
+
+            app:layout_scrollFlags="scroll|exitUntilCollapsed" : scroll表示CollapsingToolbarLayout
+            会随着水果内容详情的滚动一起滚动,exitUntilCollapsed表示当CollapsingToolbarLayout随着滚动完
+            成折叠之后就保留在界面上,不再移出屏幕.
+        -->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <!--
+                android:scaleType="centerCrop" : 图片的缩放模式  这种模式是表示图片等比例放大,占满这个控件
+
+                app:layout_collapseMode="parallax" : 用于指定当前控件在CollapsingToolbarLayout折叠过程中
+                的折叠模式,其中Toolbar指定成pin,表示在折叠的过程中位置始终保持不变,ImageView指定成parallax,
+                表示会在折叠过程中产生一定的错位偏移,这种模式的视觉效果会非常好.
+
+                这个ImageView是用于显示顶部的图片的
+            -->
+            <ImageView
+                android:id="@+id/fruit_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--
+        NestedScrollView 和ScrollView差不多,只不过NestedScrollView在ScrollView的基础上海增加了嵌套响应
+        滚动事件的功能.
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" : 指定布局行为
+
+        这个滚动控件是用于放置下方的水果介绍的那些文字用的   可滚动
+    -->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--
+            不管是ScrollView还是NestedScrollView,它们的内部都只允许存在一个直接子布局.因此,
+            如果我们想要在里面放入很多东西的话,通常都会先嵌套一个LinearLayout,然后再在LinearLayout放入具体的内容
+        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--
+                app:cardCornerRadius="4dp" : 圆角弧度
+            -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="34dp"
+                app:cardCornerRadius="4dp">
+
+                <TextView
+                    android:id="@+id/fruit_content_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--
+        app:layout_anchor="@id/appBar" : 设置描点,即以哪个控件为参照点设置位置
+        app:layout_anchorGravity="bottom|end" : 设置按钮在底部和右边
+    -->
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_comment"
+        app:layout_anchor="@id/appBar"
+        app:layout_anchorGravity="bottom|end" />
+
+</android.support.design.widget.CoordinatorLayout>

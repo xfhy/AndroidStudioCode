@@ -129,7 +129,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     OkHttpClient client = new OkHttpClient();
                     //2. 创建Request对象
                     Request request = new Request.Builder()
-                            .url("http://10.0.3.2/get_data.json")   //设置目标地址URL
+//                            .url("http://10.0.3.2/get_data.json")   //设置目标地址URL
+                            .url("http://xfhy-json.oss-cn-shanghai.aliyuncs.com/get_data.json")
                             .build();
                     //3.获取服务器返回的数据    就是这个Response对象
                     Response response = client.newCall(request).execute();
