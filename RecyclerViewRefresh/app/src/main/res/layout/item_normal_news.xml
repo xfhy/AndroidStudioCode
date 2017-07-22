@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:orientation="vertical">
+
+    <!--CardView就是FrameLayout
+
+        CardView_cardBackgroundColor 设置背景色
+        CardView_cardCornerRadius 设置圆角大小
+        CardView_cardElevation 设置z轴阴影
+        CardView_cardMaxElevation 设置z轴最大高度值
+        CardView_cardUseCompatPadding 是否使用CompadPadding
+        CardView_cardPreventCornerOverlap 是否使用PreventCornerOverlap
+        CardView_contentPadding 内容的padding
+        CardView_contentPaddingLeft 内容的左padding
+        CardView_contentPaddingTop 内容的上padding
+        CardView_contentPaddingRight 内容的右padding
+        CardView_contentPaddingBottom 内容的底padding
+    -->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp">
+
+        <TextView
+            android:id="@+id/tv_news_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="hehe"/>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

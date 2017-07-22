@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xfhy.viewpagerindicator.MainActivity">
+
+    <!--主界面-->
+
+    <!--标题栏-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#cf000000">
+
+        <!--侧滑菜单-->
+        <ImageView
+            android:id="@+id/iv_left_menu"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/home_side"/>
+
+        <!--右侧搜索-->
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginRight="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/home_search"/>
+
+        <!--中间的文字-->
+        <FrameLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            >
+            <!--最新-->
+            <TextView
+                android:id="@+id/tv_latest"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="最新"
+                android:textColor="@color/colorwhite"
+                android:textSize="15sp"/>
+
+            <!--最热-->
+            <TextView
+                android:id="@+id/tv_hottest"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="85dp"
+                android:gravity="center"
+                android:text="最热"
+                android:textColor="@color/colorgray"
+                android:textSize="15sp"/>
+
+            <!--最下面的Indicator   其实就是一条线-->
+            <View
+                android:id="@+id/view_indicator"
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp"
+                android:background="#ffffff"
+                />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <!--下面的页签   其实就是一个ViewPager   然后2个页签,两个RecyclerView-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

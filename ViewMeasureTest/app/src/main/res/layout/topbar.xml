@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xfhy.viewmeasuretest.TopBar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:rightTextColor="@color/colorPrimary"
+    app:rightBackground="@color/colorXfhy"
+    app:rightText="编辑"
+    app:leftTextColor="@color/colorPrimary"
+    app:leftBackground="@color/colorXfhy"
+    app:leftText="返回"
+    app:_titleTextSize="20sp"
+    app:_titleTextColor="@color/colorPrimary"
+    android:id="@+id/tb_bar"
+    android:layout_below="@id/ft"
+    android:layout_marginTop="10dp"
+    app:_title="标题"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorAccent">
+
+</com.xfhy.viewmeasuretest.TopBar>

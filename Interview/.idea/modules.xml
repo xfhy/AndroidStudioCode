@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Interview.iml" filepath="$PROJECT_DIR$/Interview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/picturepeach/picturepeach.iml" filepath="$PROJECT_DIR$/picturepeach/picturepeach.iml" />
+      <module fileurl="file://$PROJECT_DIR$/readpicture/readpicture.iml" filepath="$PROJECT_DIR$/readpicture/readpicture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/realphone/realphone.iml" filepath="$PROJECT_DIR$/realphone/realphone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reswitch/reswitch.iml" filepath="$PROJECT_DIR$/reswitch/reswitch.iml" />
+    </modules>
+  </component>
+</project>

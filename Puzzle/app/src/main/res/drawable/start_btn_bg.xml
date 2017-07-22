@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--圆角-->
+    <corners android:radius="20dp"/>
+    <!--描边的颜色  实体描边和虚线描边-->
+    <stroke android:color="#5381d7"/>
+    <!--实体填充色-->
+    <solid android:color="#5381d7"/>
+
+    <!--渐变色-->
+    <!--<gradient
+        android:endColor="#4d92af"
+        android:startColor="#5c91c6"/>-->
+
+</shape>

@@ -1,5 +1,6 @@
 package com.xfhy.materialtest;
 
+import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -176,4 +177,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        //在这里写屏幕发生变化的时候进行相应的逻辑处理
+        super.onConfigurationChanged(newConfig);
+    }
 }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xfhy.screenfitvalue.PRelativeActivity">
+
+    <!--这个布局是百分比布局   RercentRelativeLayout-->
+
+    <TextView
+        android:id="@+id/item_one"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:background="#7700ff00"
+        android:gravity="center"
+        android:text="w:70%,h:20%"
+        app:layout_heightPercent="20%"
+        app:layout_widthPercent="70%"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="#396190"
+        android:gravity="center"
+        android:text="w:30%,h:20%"
+        app:layout_heightPercent="20%"
+        app:layout_widthPercent="30%"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/item_one"
+        android:scaleType="centerCrop"
+        android:src="@drawable/yangyang"
+        app:layout_heightPercent="70%"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="#4aa1b7"
+        android:gravity="center"
+        android:text="width:100%,height:10%"
+        app:layout_heightPercent="10%"
+        />
+
+</android.support.percent.PercentRelativeLayout>

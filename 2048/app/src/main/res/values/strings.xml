@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 原版  18禁版《2048》 情侣版   丧病版  朝代版《2048》  甲乙丙丁版《2048》  逆向版《2048》 -->
+<resources>
+
+    <string name="app_name">2048豪华版</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="original">经典版</string>
+    <string name="reverse">逆向版</string>
+    <string name="lovers">情侣版</string>
+    <string name="bereavement">丧病版</string>
+    <string name="dynasty">朝代版</string>
+    <string name="themeetingpoint">甲乙版</string>
+    <string name="score">分数:</string>
+    <string name="newgame">重新开始</string>
+    <string name="bestscore">最高分:</string>
+    <string name="more">快来试试你的水平,一起夺下2048!</string>
+    <string name="title_activity_second">2048豪华版</string>
+    <string name="title_activity_about">关于作者</string>
+    <string name="about_author">关于作者</string>
+    <string name="authorinfo">本产品由潇风寒月制作~~</string>
+    <string name="chat">欢迎各位广大朋友反馈,邮箱:1319504383@qq.com</string>
+
+</resources>

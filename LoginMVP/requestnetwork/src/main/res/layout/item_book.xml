@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:gravity="center_vertical"
+              android:background="#c4ea77"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_book_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Clash of Clans"
+        android:textColor="#8742b7"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/tv_book_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id:5"
+            android:textColor="#c15147c7"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_book_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="version:5.5"
+            android:textColor="#c164c2a0"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

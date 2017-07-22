@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xfhy.screenfitvalue.MainActivity">
+
+    <!--屏幕适配-->
+
+    <!--占屏幕宽度一半,高度的1/24-->
+    <TextView
+        android:layout_width="@dimen/x160"
+        android:layout_height="@dimen/y20"
+        android:text="占屏幕宽度一半,高度的1/24"
+        android:background="@color/colorAccent"/>
+
+    <!--占屏幕宽度  5/8,高度的3/16  -->
+    <Button
+        android:id="@+id/btn_second"
+        android:layout_width="@dimen/x200"
+        android:layout_height="@dimen/y90"
+        android:background="#764040"
+        android:text="占屏幕宽度  5/8,高度的3/16"
+        android:layout_gravity="bottom"/>
+
+</LinearLayout>
