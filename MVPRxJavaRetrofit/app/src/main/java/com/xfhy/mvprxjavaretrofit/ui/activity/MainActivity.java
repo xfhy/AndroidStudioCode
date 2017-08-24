@@ -1,5 +1,6 @@
 package com.xfhy.mvprxjavaretrofit.ui.activity;
 
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.xfhy.mvprxjavaretrofit.R;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements JokeView, View.On
     private Button requestNetBtn;
     private TextView contentTv;
     private WebView webview;
+    private ImageView imageview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
