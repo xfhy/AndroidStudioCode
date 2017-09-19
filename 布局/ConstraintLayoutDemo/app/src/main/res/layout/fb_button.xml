@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--
+        设置4个方向的拉力   垂直的间隙为90%和10%   90%那边拉力小一些
+    -->
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#fbc"
+        android:text="悬浮按钮"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"/>
+
+
+    <!-- 分割线 -->
+
+    <!-- 横向距离底部50% -->
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <!-- 竖向 距离左侧80% -->
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8"/>
+
+    <!--通过两根辅助线来定位-->
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="#fbc"
+        android:text="悬浮按钮 0.7"
+        app:layout_constraintRight_toLeftOf="@id/gl_w"
+        app:layout_constraintTop_toBottomOf="@id/gl_h"/>
+
+</android.support.constraint.ConstraintLayout>
