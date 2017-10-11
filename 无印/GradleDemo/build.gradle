@@ -1,0 +1,35 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+def androidSupportVersion='26+'
+ext {
+    compileSdkVersion = 26   //基于哪个SDK编译的,这里是API LEVEL
+    buildToolsVersion = "26.0.2" //基于哪个构建工具版本进行构建的
+    minSdkVersion = 17    //最小能支持的系统版本号
+    targetSdkVersion = 26  //最佳支持的系统版本号
+    appcompatV7 = "com.android.support:appcompat-v7:$androidSupportVersion"
+}
+
+buildscript {
+    repositories {
+        //使用jcenter仓库 一些第三方的开源框架就放在这上面的
+        jcenter()
+    }
+    dependencies {
+        //依赖android提供的2.3.3的gradle build
+        classpath 'com.android.tools.build:gradle:2.3.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+//为所有的工程的repositories配置为jcenters
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

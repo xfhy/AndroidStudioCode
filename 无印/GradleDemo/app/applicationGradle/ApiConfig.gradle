@@ -1,0 +1,9 @@
+android {
+    applicationVariants.all {
+        //可以在这里配置好url,然后在代码中就可以直接用了,可配置
+        buildConfigField "String", "INVITE_PEOPLE_URL", '"www.baidu.com"'
+        buildConfigField "String", "TRAIN_CONFIG_URL", '"www.baidu22.com"'
+        buildConfigField "String", "HOTEL_CONFIG_URL", '"www.baidu33.com"'
+        buildConfigField "String", "SERVICE_CENTER_URL", '"www.baidu324.com"'
+    }
+}

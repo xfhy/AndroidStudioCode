@@ -1,0 +1,7 @@
+android {
+    productFlavors{   //多渠道打包
+        xiaomi{
+            applicationId 'com.xfhy.gradledemo.xiaomi'
+        }
+    }
+}

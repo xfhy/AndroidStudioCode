@@ -1,0 +1,57 @@
+//表示该module是一个app module   
+apply plugin: 'com.android.application'
+//引用自己建的文件夹下面的gradle文件,并把配置信息放进去
+apply from: './applicationGradle/ApiConfig.gradle'
+apply from: './applicationGradle/xiaomi.gradle'
+apply from: './applicationGradle/googleplay.gradle'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion   //基于哪个SDK编译的,这里是API LEVEL
+    buildToolsVersion rootProject.ext.buildToolsVersion //基于哪个构建工具版本进行构建的
+    defaultConfig {   //默认配置,如果没有其他的配置覆盖,就会使用这里的
+        applicationId "com.xfhy.gradledemo"  //配置包名
+        minSdkVersion rootProject.ext.minSdkVersion    //最小能支持的系统版本号
+        targetSdkVersion rootProject.ext.targetSdkVersion  //最佳支持的系统版本号
+        versionCode 1 //版本号
+        versionName "1.0"  //版本名称
+
+        //把AndroidJunitRunner 设置成默认的test instrumentation runner  
+        //AndroidJUnitRunner能运行junit3和junit4风格的测试用例，InstrumentationTestRunner只能运行junit3类型的测试用例
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //可以直接在这里配置好服务器的host_url
+        buildConfigField 'String','API_SERVER_URL','"http:www.baidu.com"'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //定制生成的apk文件名
+    applicationVariants.all { variant ->
+        if (variant.buildType.name.equals('release')) {
+            variant.outputs.each { output ->
+                def outputFile = output.outputFile
+                if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                    def fileName = "gradle4android_v${defaultConfig.versionName}_${variant.flavorName}.apk"
+                    output.outputFile = new File(outputFile.parent, fileName)
+                }
+            }
+        }
+    }
+
+}
+
+dependencies {
+    //引用所有在libs文件夹下的jar
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile rootProject.ext.appcompatV7
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+}
+

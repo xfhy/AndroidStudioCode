@@ -1,0 +1,8 @@
+android {
+    productFlavors{   //多渠道打包
+        googleplay{    //这样写了(还需要在app build下apply)之后会在build variant中多一个选项
+            applicationId 'com.xfhy.gradledemo.googleplay'
+        }
+    }
+
+}
