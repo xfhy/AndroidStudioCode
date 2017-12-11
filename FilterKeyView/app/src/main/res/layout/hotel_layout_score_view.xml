@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_ffffff"
+              android:orientation="vertical"
+              android:padding="@dimen/dimen_5">
+
+    <!--评分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/tv_hotel_score_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评分"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="@dimen/font_size_14"/>
+
+        <LinearLayout
+            android:id="@+id/ll_hotel_score_line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hotel_score_info"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:orientation="horizontal">
+
+
+            <CheckBox
+                android:id="@+id/cb_score_no_limit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_marginRight="@dimen/dimen_5"
+                android:layout_weight="1"
+                android:background="@drawable/selector_orange"
+                android:button="@null"
+                android:gravity="center"
+                android:text="不限"
+                android:textColor="@drawable/selector_text_orange"
+                android:textSize="@dimen/font_size_14"/>
+
+            <CheckBox
+                android:id="@+id/cb_score_one"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_marginRight="@dimen/dimen_5"
+                android:layout_weight="1"
+                android:background="@drawable/selector_orange"
+                android:button="@null"
+                android:gravity="center"
+                android:text="1分以上"
+                android:textColor="@drawable/selector_text_orange"
+                android:textSize="@dimen/font_size_14"/>
+
+            <CheckBox
+                android:id="@+id/cb_score_two"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_weight="1"
+                android:background="@drawable/selector_orange"
+                android:button="@null"
+                android:gravity="center"
+                android:text="2分以上"
+                android:textColor="@drawable/selector_text_orange"
+                android:textSize="@dimen/font_size_14"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_hotel_score_line1"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:orientation="horizontal">
+
+
+            <CheckBox
+                android:id="@+id/cb_score_three"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_marginRight="@dimen/dimen_5"
+                android:layout_weight="1"
+                android:background="@drawable/selector_orange"
+                android:button="@null"
+                android:gravity="center"
+                android:text="3分以上"
+                android:textColor="@drawable/selector_text_orange"
+                android:textSize="@dimen/font_size_14"/>
+
+            <CheckBox
+                android:id="@+id/cb_score_four"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_40"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_marginRight="@dimen/dimen_5"
+                android:layout_weight="1"
+                android:background="@drawable/selector_orange"
+                android:button="@null"
+                android:gravity="center"
+                android:text="4分以上"
+                android:textColor="@drawable/selector_text_orange"
+                android:textSize="@dimen/font_size_14"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:layout_weight="1"
+                android:background="@color/color_ffffff"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_clear_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_gray_boder_btn"
+            android:paddingLeft="@dimen/dimen_5"
+            android:paddingRight="@dimen/dimen_5"
+            android:text="清空选择"
+            android:textColor="@color/color_cdcdcd"
+            android:textSize="@dimen/dimen_14"/>
+
+        <Button
+            android:id="@+id/btn_determine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_blue"
+            android:text="确定"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/dimen_14"/>
+
+    </LinearLayout>
+
+</LinearLayout>

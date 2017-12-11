@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="gray">#a9b7b7</color>
+
+    <!-- 黑色字体-->
+    <color name="color_1e1e1e">#1e1e1e</color>
+    <color name="color_ffffff">#ffffff</color>
+    <!-- 线的背景颜色-->
+    <color name="color_40f0f0f0">#40f0f0f0</color>
+    <color name="color_555555">#555555</color>
+    <!--橘色字体 -->
+    <color name="color_ff9133">#ff9133</color>
+    <!-- 深灰色字体-->
+    <color name="color_949494">#949494</color>
+    <color name="color_0f85cc">#0f85cc</color>
+    <color name="color_ff7e15">#ff7e15</color>
+    <color name="color_cdcdcd">#cdcdcd</color>
+
+    <!-- 浅灰色字体-->
+    <color name="line">#dadada</color>
+    <color name="background_F5">#F5F5F5</color>
+    <color name="color_f45f4c">#f45f4c</color>
+    <color name="color_FFFFFF">#FFFFFF</color>
+    <color name="color_52b4ed">#52b4ed</color>
+    <color name="color_f33031">#ff0000</color>
+    <color name="color_13b1ff">#13b1ff</color>
+    <color name="color_109ded">#109ded</color>
+    <color name="color_f9f9f9">#f9f9f9</color>
+
+    <drawable name="text_color_13b1ff">#13b1ff</drawable>
+    <drawable name="text_color_949494">#949494</drawable>
+
+    <color name="color_80000000">#80000000</color>
+    <color name="color_55000000">#55000000</color>
+    <color name="color_2b2c2e">#2b2c2e</color>
+    <color name="color_707070">#707070</color>
+    <color name="color_f65e5e">#f65e5e</color>
+    <color name="color_858585">#858585</color>
+    <color name="color_c3c3c3">#c3c3c3</color>
+    <color name="color_5ec9f8">#5ec9f8</color>
+
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.xfhy.popupwindowdemo.MainActivity">
+
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="弹出"/>
+
+    <com.xfhy.popupwindowdemo.widget.RangeSeekBar
+        android:id="@+id/rsb_3"
+        android:layout_width="200dip"
+        android:layout_height="36dip"
+        app:cells="8"
+        app:lineColorEdge="#5cb774"
+        app:lineColorSelected="#b54747"
+        app:max="800"
+        app:min="0"
+        app:reserve="100"
+        app:seekBarResId="@mipmap/icon_seekbar"/>
+
+    <com.xfhy.popupwindowdemo.widget.HotelPriceView
+        android:id="@+id/hpv_test"
+        android:background="@color/color_f3f3f3"
+        android:layout_width="@dimen/dimen_100"
+        android:layout_height="@dimen/dimen_30"
+        app:fontSize="@dimen/font_size_16"
+        app:pointSize="@dimen/dimen_10"
+        app:price="¥ 200"
+        app:selectColor="@color/color_ff9133"
+        app:unSelectColor="@color/color_cdcdcd"/>
+
+</LinearLayout>
